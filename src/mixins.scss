@@ -1,0 +1,64 @@
+// This will serve as the Global Styling Settings
+
+
+// Mixins 
+
+// Line Height Calculator
+
+@function line-height($font-size, $line-height) {
+    @return #{calc($line-height / $font-size) * 1 };
+}
+
+// Font size and Line Height mixin
+
+@mixin fontStyle($font-size, $line-height , $color) {
+    font-size: $font-size;
+    color: $color;
+    line-height: line-height($font-size, $line-height);
+}
+
+// Transition Config
+@mixin transitionConfig($speed, $easing) {
+	transition : $speed;
+	transition-timing-function: $easing;
+}
+
+
+// Typography
+
+@mixin font-smoothing {
+    -webkit-font-smoothing: antialiased; // For Chrome, Safari, Opera
+    -moz-osx-font-smoothing: grayscale; // For Firefox
+    text-rendering: optimizeLegibility; // General improvement
+}
+
+@mixin ff-protest-strike {
+    font-family: 'Protest Strike', sans-serif;
+    font-size: normal;
+    @include font-smoothing;
+}
+
+@mixin ff-mosterrat-reg{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    @include font-smoothing;
+}
+
+@mixin ff-mosterrat-sbold{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    @include font-smoothing;
+}
+
+@mixin ff-mosterrat-bold{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    @include font-smoothing;
+}
+
+
+// General Settings
+

@@ -24,3 +24,57 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+// Mixins
+@import "mixins.scss";
+
+
+// General Styles
+
+*{
+    box-sizing: border-box;
+} 
+
+body {
+    @include ff-mosterrat-reg;
+    @include fontStyle(10px, 14px, white);
+}
+
+h1{
+    @include ff-protest-strike;
+    font-size: 4.5rem;
+    @include fontStyle(45px, 55px, white);
+}
+
+h2{
+    @include ff-mosterrat-bold;
+    @include fontStyle(38px, 45px, white);
+}
+
+h3{
+    @include ff-mosterrat-sbold;
+    @include fontStyle(30px, 40px, white);
+}
+
+h4{
+    @include ff-mosterrat-sbold;
+    @include fontStyle(24px, 30px, white);
+}
+
+h5{
+    @include ff-mosterrat-reg;
+    @include fontStyle(20px, 25px, white);
+}
+
+
+p{
+    @include ff-mosterrat-reg;
+    @include fontStyle(14px, 14px, white);
+}
+
+
+h1,h2,h3,h4,h5,p {
+    @include font-smoothing;
+    margin: 0;
+    padding: 0;
+}
