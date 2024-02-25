@@ -1,0 +1,39 @@
+@import '../../../mixins';
+
+.game-greeting-section__container{
+    display: flex; 
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+    .title__container{
+        flex: 0 0 100%;
+        text-align: center;
+        h1{
+
+        }
+    }
+    .btn__container{
+        flex: 0 0 100%;
+        text-align: center;
+        max-width: 15rem;
+        .btn--game-start{
+            --background: none;
+            --color: white;  
+            --border-width : none;
+            --box-shadow: none;
+            --background-hover : none;
+            --background-hover-opacity : none;
+            text-transform: none;
+            border-radius: 0;
+            border: none;
+            box-shadow: none;
+            @include ff-mosterrat-bold;
+            @include fontStyle(18px, 20px, white);
+            // --padding-top : 2rem;
+            // --padding-bottom : 2rem;
+            // --padding-left : 2.5rem;
+            // --padding-right : 2.5rem;
+        }
+    }
+}

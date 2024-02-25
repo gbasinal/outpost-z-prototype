@@ -31,6 +31,15 @@
 
 // General Styles
 
+:root {
+    --ion-grid-column-padding : 1rem;
+    --ion-grid-padding : 0;
+    .mx-auto {
+        margin: auto;
+    }
+}
+
+
 *{
     box-sizing: border-box;
 } 
@@ -78,3 +87,4 @@ h1,h2,h3,h4,h5,p {
     margin: 0;
     padding: 0;
 }
+

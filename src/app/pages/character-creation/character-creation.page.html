@@ -1,0 +1,89 @@
+<ion-content>
+  <div class="character-image__container">
+    <ion-card class="character-card__container">
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png"
+        class="character-profile-image">
+      <ion-card-header class="card-header__container">
+        <ion-card-subtitle class="card-subitle">
+          <h4>Name:</h4>
+        </ion-card-subtitle>
+        <ion-card-title class="card-title">
+          <h2>{{ character.name }}</h2>
+        </ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content class="body__container">
+        <ion-list class="list__container">
+          <ion-list-header class="label-header">
+            <ion-label>
+              <h3>Stats</h3>
+            </ion-label>
+          </ion-list-header>
+          <ion-item class="list-item">
+            <ion-label>
+              <p>Strength : {{ character.stats.strength }}</p>
+            </ion-label>
+          </ion-item>
+          <ion-item class="list-item">
+            <ion-label>
+              <p>Agility : {{ character.stats.agility }}</p>
+            </ion-label>
+          </ion-item>
+          <ion-item class="list-item">
+            <ion-label>
+              <p>Intelligence : {{ character.stats.intelligence }}</p>
+            </ion-label>
+          </ion-item>
+          <ion-item class="list-item">
+            <ion-label>
+              <p>Vitality : {{ character.stats.vitality }}</p>
+            </ion-label>
+          </ion-item>
+          <ion-item class="list-item">
+            <ion-label>
+              <p>Luck : {{ character.stats.luck }}</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+
+  <div class="btn__container">
+    <ion-button size="small" expand="inline" class="btn--game-start" (click)="randomizedStats()">
+     Randomized Stats
+    </ion-button>
+    <ion-button size="small" expand="inline" class="btn--game-start" id="confirm-modal">
+      <span class="btn">Create Character</span>
+    </ion-button>
+  </div>
+</ion-content>
+
+<!-- Confirm Modal -->
+
+<ion-modal class="confirm-modal" #modal trigger="confirm-modal" [initialBreakpoint]="0.25"
+  [breakpoints]="[0, 0.25, 0.5, 0.75]">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Confirm Character</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="modal.dismiss()">Close</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <div class="modal__container ion-padding">
+        <p class="dark">Are you sure you want to proceed with this character?</p>
+        <div class="btn__container">
+          <ion-button size="small" expand="inline" class="btn--game-start btn--game-start_confirm"
+            (click)="createCharacter()">
+            <span class="btn">Confirm</span>
+            <ion-ripple-effect></ion-ripple-effect>
+          </ion-button>
+        </div>
+      </div>
+    </ion-content>
+  </ng-template>
+</ion-modal>
