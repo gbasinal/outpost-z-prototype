@@ -1,3 +1,23 @@
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
+  <ion-tabs *ngIf="showTabs">
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button (click)="goToNextPage('profile')">
+        <ion-icon name="play-circle"></ion-icon>
+        <p class="tab-title">Profile</p>
+      </ion-tab-button>
+      <ion-tab-button (click)="goToNextPage('resource')">
+        <ion-icon name="radio"></ion-icon>
+        <p class="tab-title">Resources</p>
+      </ion-tab-button>
+      <ion-tab-button  (click)="goToNextPage('base')">
+        <ion-icon name="library"></ion-icon>
+        <p class="tab-title">Base</p>
+      </ion-tab-button>
+      <ion-tab-button (click)="goToNextPage('explore')">
+        <ion-icon name="search"></ion-icon>
+        <p class="tab-title">Explore</p>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-app>
