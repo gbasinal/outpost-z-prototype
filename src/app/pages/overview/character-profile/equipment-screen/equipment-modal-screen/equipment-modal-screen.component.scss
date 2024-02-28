@@ -1,0 +1,29 @@
+.modal__container{
+    .btn__container{
+        ion-button{
+
+        }
+    }
+    .equipment-image__container{
+        width: 100%;
+        img{
+            margin: 0 auto;
+            display: block;
+        }
+    }
+    .equipment-details__container{
+        .equipment-type{
+            margin-bottom: 1.5rem;
+        }
+        .name{
+            margin-bottom: .5rem;
+        }
+        .stats-list__container{
+            ion-item{
+                ion-label{
+
+                }
+            }
+        }
+    }
+}

@@ -1,60 +1,39 @@
-<ion-card>
-  <ion-card-header>
-    <ion-card-title>Equipments</ion-card-title>
-  </ion-card-header>
-
-  <ion-card-content>
-    <ion-card>
-      <ion-grid>
-        <ion-row>
-          <ion-col class="ion-text-center">
-            <ion-thumbnail class="mx-auto">
-              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-            </ion-thumbnail>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col class="ion-text-center">
-            <ion-thumbnail class="mx-auto">
-              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-            </ion-thumbnail>
-          </ion-col>
-          <ion-col class="ion-text-center">
-            <ion-thumbnail class="mx-auto">
-              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-            </ion-thumbnail>
-          </ion-col>
-          <ion-col class="ion-text-center">
-            <ion-thumbnail class="mx-auto">
-              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-            </ion-thumbnail>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col class="ion-text-center">
-            <ion-thumbnail class="mx-auto">
-              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-            </ion-thumbnail>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col class="ion-text-center">
-            <ion-thumbnail class="mx-auto">
-              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-            </ion-thumbnail>
-          </ion-col>
-          <ion-col class="ion-text-center">
-            <ion-thumbnail class="mx-auto">
-              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-            </ion-thumbnail>
-          </ion-col>
-          <ion-col class="ion-text-center">
-            <ion-thumbnail class="mx-auto">
-              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-            </ion-thumbnail>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card>
-  </ion-card-content>
-</ion-card>
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Equipments</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <ion-list>
+            <ion-item *ngFor="let item of equipmentItems" (click)="openEquipmentModal(item.label)">
+              <ion-thumbnail slot="start">
+                <img [src]="item.src" [alt]="item.label" />
+              </ion-thumbnail>
+              <ion-label>{{ item.label }}</ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>  
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-segment value="custom">
+          <ion-segment-button value="custom">
+            <ion-label>1</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="segment">
+            <ion-label>2</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+        <ion-card-content>
+          <app-inventory></app-inventory>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
