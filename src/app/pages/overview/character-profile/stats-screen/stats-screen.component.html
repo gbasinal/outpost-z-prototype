@@ -1,3 +1,38 @@
-<p>
-  stats-screen works!
-</p>
+<section class="stats__container">
+  <ion-grid class="name__container">
+    <ion-row>
+      <ion-col>
+        <h3>{{characterStats.name}}</h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="main-stats__container">
+    <ion-row class="main-stats__container">
+      <ion-col>
+        <ion-list lines="full">
+          <ion-item>
+            <ion-label>Strength</ion-label>
+            <ion-note slot="end">{{characterStats.stats.strength}}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label>Agility</ion-label>
+            <ion-note slot="end">{{characterStats.stats.agility}}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label>Intelligence</ion-label>
+            <ion-note slot="end">{{characterStats.stats.intelligence}}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label>Vitality</ion-label>
+            <ion-note slot="end">{{characterStats.stats.vitality}}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label>Luck</ion-label>
+            <ion-note slot="end">{{characterStats.stats.luck}}</ion-note>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</section>

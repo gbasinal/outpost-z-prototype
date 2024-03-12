@@ -13,8 +13,8 @@ import { InventoryComponent } from './equipment-screen/inventory/inventory.compo
     CharacterProfilePage,
     EquipmentScreenComponent,
     EquipmentModalScreenComponent,
-    InventoryComponent
-    // StatsScreenComponent,
+    InventoryComponent,
+    StatsScreenComponent,
   ],
   imports: [
     CommonModule,

@@ -12,6 +12,12 @@ import { IonicModule } from '@ionic/angular';
 })
 export class CharacterProfilePage {
 
+  isStatsScreenActive : boolean = false;
+
   constructor() { }
+
+  toggleScreen(isActive : boolean){
+    this.isStatsScreenActive = isActive;
+  }
 
 }

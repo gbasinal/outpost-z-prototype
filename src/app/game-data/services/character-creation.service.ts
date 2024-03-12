@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage-angular';
-import { CharacterModel } from 'src/model/character.model';
+import { CharacterModel } from '../model/character.model';
+
 
 
 @Injectable({

@@ -6,13 +6,27 @@
     </ion-col>
   </ion-row>
   <ion-row>
-    <ion-col class="equipment__container">
-      <app-equipment-screen></app-equipment-screen>
+    <ion-col>
+      <ion-segment value="custom">
+        <ion-segment-button value="custom" (click)="toggleScreen(false)">
+          <ion-label>Equipment</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="segment" (click)="toggleScreen(true)">
+          <ion-label>Stats</ion-label>
+        </ion-segment-button>
+      </ion-segment>
     </ion-col>
   </ion-row>
   <ion-row>
-    <ion-col class="stats__container">
-      <!-- <app-stats-screen></app-stats-screen> -->
-    </ion-col>
+    <ng-container *ngIf="!isStatsScreenActive">
+      <ion-col class="equipment__container">
+        <app-equipment-screen></app-equipment-screen>
+      </ion-col>
+    </ng-container>
+    <ng-container *ngIf="isStatsScreenActive">
+      <ion-col class="stats__container">
+        <app-stats-screen></app-stats-screen>
+      </ion-col>
+    </ng-container>
   </ion-row>
 </ion-grid>

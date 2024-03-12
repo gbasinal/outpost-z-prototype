@@ -3,8 +3,9 @@ import { Component, OnInit, ViewChild  } from '@angular/core';
 import { Router } from '@angular/router';
 import { IonicModule, ModalController   } from '@ionic/angular';
 import { IonCard, IonButton, IonContent, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonModal, IonList, IonLabel, IonListHeader, IonItem, IonToolbar, IonRippleEffect, IonTitle, IonButtons } from '@ionic/angular/standalone';
-import { CharacterModel } from 'src/model/character.model';
-import { CharacterCreationService } from 'src/services/character-creation.service';
+import { CharacterModel } from 'src/app/game-data/model/character.model';
+
+import { CharacterCreationService } from 'src/app/game-data/services/character-creation.service';
 
 @Component({
   selector: 'app-character-creation',
